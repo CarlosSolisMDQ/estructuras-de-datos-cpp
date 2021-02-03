@@ -96,7 +96,7 @@ int main()
     Cola1->insertarItem(3); //inserto un dato
     Cola1->imprimirCola(); //imprimo la pila
     cout<<"\n";
-    cout<<"Extraemos de la pila:" <<Cola1->quitarItem()<<"\n"; //se extrae un elemento del tope de la pila
+    cout<<"Extraemos de la pila:" <<Cola1->quitarItem()<<"\n"; //se extrae el primer elemento de la cola
     cout<<"\n";
     Cola1->imprimirCola(); //se imprime la pila
     delete Cola1; //se libera la memoria
