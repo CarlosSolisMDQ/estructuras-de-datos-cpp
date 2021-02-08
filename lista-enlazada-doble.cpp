@@ -10,7 +10,7 @@ class Lista {
         Nodo *siguiente; //la lista doble tiene dos punteros en cada nodo
     };
     Nodo *raiz;
-    Nodo *tope; //agrego un puntero tope para tener registrdos los dos extreos de la lista.
+    Nodo *tope; //agrego un puntero tope para tener registrados los dos extremos de la lista.
     public:
     Lista();
     ~Lista();
@@ -58,12 +58,12 @@ void Lista::agregarNodo(int numero){
 
 void Lista::borrarNodo(int nodo){
     int contador = 1; //contador indice por si quiero borrar por posicion y no por contenido.
-    Nodo *iterador = raiz; //creamod un puntero iterador del tamaño de un nodo
+    Nodo *iterador = raiz; //creamos un puntero iterador del tamaño de un nodo
     
     while(iterador != NULL){
         if(iterador->dato == nodo && iterador->anterior == NULL){
-            raiz = iterador->siguiente; //si el contenido del nodo conincide y su anterior es null, es la raiz
-            tope = iterador->siguiente; //hacemos la raiz y  tope el siguiente
+            raiz = iterador->siguiente; //si el contenido del nodo coincide y su anterior es null, es la raiz
+            tope = iterador->siguiente; //hacemos la raiz y tope el siguiente
             delete iterador; //se borra el actual(raiz)
         }
 
@@ -82,7 +82,7 @@ void Lista::borrarNodo(int nodo){
             nodoSiguiente = iterador->siguiente;
             Nodo *nodoAnterior; 
             nodoAnterior = iterador->anterior;
-            //creamos dos punteros temporales para almacenar el anterior y siguietne y acceder a sus propiedades
+            //creamos dos punteros temporales para almacenar el anterior y el siguiente para acceder a sus propiedades
             nodoAnterior->siguiente = nodoSiguiente; //referenciamos esos dos nodos saltando al actual
             nodoSiguiente->anterior = nodoAnterior;
 
